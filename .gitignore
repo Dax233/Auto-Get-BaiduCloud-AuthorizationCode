@@ -1,0 +1,12 @@
+# Python 虚拟机与缓存
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+
+# 本地凭证（不要把真实 AppKey/SecretKey 提交进仓库）
+.env
+*.local.json

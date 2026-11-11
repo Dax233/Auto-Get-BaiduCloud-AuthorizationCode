@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "baidu-auth"
+version = "0.2.0"
+description = "获取百度网盘 OAuth access_token 的命令行小工具（Auto-Get-BaiduCloud-AuthorizationCode 重构版）"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "requests>=2.31",
+    "selenium>=4.15",
+]
+
+[project.scripts]
+baidu-auth = "baidu_auth.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["baidu_auth*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
